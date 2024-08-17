@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    input, button{
+        width: max-content;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 5px;
+    }
+
+    button{
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    button:active{
+        scale: 0.95;
+    }
+
+    input{
+        border: 1px solid rgb(0 0 0 / 30%);
+    }
+
+    .tojson{
+        display: flex;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <form id="form">
+        <h3>Прикрепить файл</h3>
+        <input id='url' required type="text" placeholder="Введите url для запроса"  />
+        <input id="file" required name="file" accept="image/*" type="file" />
+        <input id="name" required value="Название поста" name="name" type="text" />
+        <input id="description" required value="Описание поста" name="description" type="text" />
+        <input id="tags" placeholder="Введите теги через запятую" name="tags" value="собака, кошка" />
+        <button id="button" type="submit">Отправить</button>
+    </form>
+    <label class="tojson">
+        <input type="checkbox" id="tojson" />
+        <p>Преобразовать теги в json</p>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
